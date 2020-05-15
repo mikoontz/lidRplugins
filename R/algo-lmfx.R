@@ -86,6 +86,8 @@ lmfx = function(ws, hmin = 2, dist_2d = 3)
     return(output)
   }
 
-  class(f) <- c("PointCloudBased", "IndividualTreeDetection", "Algorithm", "lidR")
+  # class(f) <- c("PointCloudBased", "IndividualTreeDetection", "Algorithm", "lidR")
+  class(f) <- c(lidR:::LIDRALGORITHMITD, lidR:::LIDRALGORITHMOPENMP, lidR:::LIDRALGORITHMPOINTCLOUDBASED)
+
   return(f)
 }
